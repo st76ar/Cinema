@@ -1,12 +1,25 @@
+import java.util.ArrayList;
+
 public class Viewer {
     private String nickname;
     private int age;
     private int countViewedMovies;
 
-    public Viewer(String nickname, int age, int countViewedMovies) {
+    private ArrayList<Cinema> cinemas;
+
+    public Viewer(String nickname, int age, ArrayList<Cinema> cinemas) {
         this.nickname = nickname;
         this.age = age;
-        this.countViewedMovies = countViewedMovies;
+        this.countViewedMovies = cinemas.size();
+        this.cinemas = cinemas;
+    }
+
+    public ArrayList<Cinema> getCinemas() {
+        return cinemas;
+    }
+
+    public void setCinemas(ArrayList<Cinema> cinemas) {
+        this.cinemas = cinemas;
     }
 
     public String getNickname() {
